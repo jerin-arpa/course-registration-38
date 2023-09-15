@@ -1,16 +1,27 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { FaDollarSign, FaBookOpen } from 'react-icons/fa';
+import Cart from "../Cart/Cart";
 
 const Home = () => {
 
     const [allCourse, setAllCourse] = useState([]);
+    const [selectedCourse, setSelectedCourse] = useState([]);
+
 
     useEffect(() => {
         fetch('./data.json')
             .then(res => res.json())
             .then(data => setAllCourse(data))
     }, []);
+
+
+
+    const handleSelectButton = (course) => {
+
+        const newSelectedCourse = [...selectedCourse, course];
+        setSelectedCourse(newSelectedCourse);
+    }
 
 
 
@@ -55,7 +66,7 @@ const Home = () => {
                                 </div>
 
                                 <div className="mt-5">
-                                    <button className=" btn-color w-full py-2 rounded-lg">Select</button>
+                                    <button onClick={() => handleSelectButton(course)} className=" btn-color w-full py-2 rounded-lg">Select</button>
                                 </div>
                             </div>
                         ))
@@ -65,16 +76,7 @@ const Home = () => {
 
                 {/* cart-container */}
                 <div className="w-full md:w-1/4 lg:w-1/4 bg-white p-5 rounded-2xl">
-                    <h2 className="text-xl font-bold text-blue-500"> Credit Hour Remaining 7 hr</h2>
-
-                    <hr className="my-3" />
-
-                    <h2 className="text-xl font-bold mb-4">Course Name</h2>
-
-                    <hr className="my-3" />
-
-                    <h2 className="text-md font-bold mb-4">Total Credit Hour : 13</h2>
-
+                    <Cart selectedCourse={selectedCourse}></Cart>
                 </div>
             </div>
 
