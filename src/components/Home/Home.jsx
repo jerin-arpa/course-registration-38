@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import { FaDollarSign, FaBookOpen } from 'react-icons/fa';
 
 const Home = () => {
 
@@ -32,16 +33,22 @@ const Home = () => {
                                 </div>
 
                                 <div>
-                                    <h1 className="text-xl font-bold mt-5">{course.course_name
+                                    <h1 className="text-xl font-bold mt-5 h-14">{course.course_name
                                     }</h1>
 
-                                    <p className="my-3">{course.details}</p>
+                                    <p className="my-3 h-28">{course.details}</p>
 
                                     <div className="flex justify-between">
-                                        <div>
+                                        <div className="flex items-center">
+                                            <p className="text-lg mr-1">
+                                                <FaDollarSign></FaDollarSign>
+                                            </p>
                                             <p>Price: {course.price}</p>
                                         </div>
-                                        <div>
+                                        <div className="flex items-center">
+                                            <p className="text-lg mr-2">
+                                                <FaBookOpen></FaBookOpen>
+                                            </p>
                                             <p>Credit: {course.credit}</p>
                                         </div>
                                     </div>
