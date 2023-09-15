@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { FaDollarSign, FaBookOpen } from 'react-icons/fa';
 import Cart from "../Cart/Cart";
+import Swal from 'sweetalert2'
+
 
 const Home = () => {
 
@@ -25,7 +27,12 @@ const Home = () => {
 
 
         if (isExist) {
-            return alert("Already Booked")
+            return Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'An item can only be added to the cart once!',
+                footer: '<a href="">Please Select another one</a>'
+            })
         }
         else {
 
@@ -36,7 +43,16 @@ const Home = () => {
             const totalRemaining = 20 - count;
 
             if (count > 20) {
-                return alert('You reach your limit');
+                return Swal.fire({
+                    title: 'Oops...',
+                    text: 'You Reach your limits!!',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
+                })
             }
             else {
                 setTotalHour(count);
