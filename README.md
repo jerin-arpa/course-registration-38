@@ -3,7 +3,6 @@
 ## Project features
 
 Here are three key features of my project:
----
 
 1. Course Selection and Cart Management:
     * Users can browse a list of available courses and select the ones they want to add to their cart.
@@ -23,9 +22,7 @@ Here are three key features of my project:
 These features ensure that users can efficiently select courses, manage their cart, keep track of their credit hours, and receive alerts for common user actions such as exceeding the credit hour limit or confirming their course selections. The "Sweet Alerts" enhance the user experience by providing clear feedback and confirmation dialogs.
 
 
-## Project features
-
-How i manage the state in my assignment project:
+How i manage the state in my project
 ---
 
 In my course registration project, i manage state using React's built-in state management, primarily with the useState hook. Here's how state is managed:
@@ -44,4 +41,10 @@ In my course registration project, i manage state using React's built-in state m
     * Display information in the UI based on the values of state variables. Show the total credit hours, remaining credit hours, and total price in the UI using values from totalHour, remaining, and totalPrice.
 
 4. Handling User Interactions:
-    * Use event handlers like onClick to trigger functions (handleSelectButton) that update state when a user interacts with the UI, such as selecting a course..
+    * Use event handlers like onClick to trigger functions (handleSelectButton) that update state when a user interacts with the UI, such as selecting a course.
+
+5. Reacting to State Changes:
+    * React automatically re-renders the component when state variables change. Whenever you call a state-setting function (e.g., setTotalHour), React re-renders the component with the updated state, ensuring the UI reflects the latest data.
+
+
+In summary, my project effectively manages state using React's useState hook to track and update information related to selected courses, remaining credit hours, total credit hours, and total prices, providing a dynamic and responsive user experience.
