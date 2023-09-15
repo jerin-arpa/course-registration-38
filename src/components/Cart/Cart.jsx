@@ -7,21 +7,23 @@ const Cart = ({ selectedCourse, remaining, totalHour }) => {
 
             <hr className="my-3" />
 
-            <h2 className="text-xl font-bold mb-4">Course Name</h2>
+            <h2 className="text-xl font-bold">Course Name</h2>
 
-            <div>
-                {
-                    selectedCourse.map((course, idx) => (
-                        <div key={idx}>
-                            <li className='list-decimal'>{course.course_name}</li>
-                        </div>
-                    ))
-                }
+            <div className='p-5'>
+                <ul>
+                    {selectedCourse.map((course, idx) => (
+                        <li key={idx} className='list-decimal'>{course.course_name}</li>
+                    ))}
+                </ul>
             </div>
 
             <hr className="my-3" />
 
             <h2 className="text-md font-bold mb-4">Total Credit Hour : {totalHour} hr</h2>
+
+            <hr className="my-3" />
+
+            <h2 className="text-md font-bold mb-4">Total Price: {totalHour} USD</h2>
         </div>
     );
 };

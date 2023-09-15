@@ -2,24 +2,24 @@
     {
         "id": 1,
         "course_name": "Introduction to C Programming",
-        "credit": 3,
-        "price": 299.99,
+        "credit": 1,
+        "price": 15000,
         "details": "Get started with the fundamentals of C programming in this introductory course.",
         "image": "https://i.ibb.co/Bgf0dLB/IMG-20230915-WA0004.jpg"
     },
     {
         "id": 2,
         "course_name": "Introduction to Algorithms",
-        "credit": 4,
-        "price": 399.99,
+        "credit": 2,
+        "price": 25000,
         "details": "Explore the world of algorithms and algorithmic problem-solving in this foundational course.",
         "image": "https://i.ibb.co/r5fqXH5/IMG-20230915-WA0002.jpg"
     },
     {
         "id": 3,
         "course_name": "Introduction to C++ for DSA",
-        "credit": 5,
-        "price": 499.99,
+        "credit": 10,
+        "price": 10000,
         "details": "Learn C++ programming with a focus on data structures and algorithms in this comprehensive course.",
         "image": "https://i.ibb.co/Dzy132t/IMG-20230915-WA0005.jpg"
     },
@@ -27,23 +27,23 @@
         "id": 4,
         "course_name": "Basic Data Structures",
         "credit": 4,
-        "price": 449.99,
+        "price": 35000,
         "details": "Master the fundamental data structures used in programming with hands-on examples.",
         "image": "https://i.ibb.co/M8qYWpr/IMG-20230915-WA0000.jpg"
     },
     {
         "id": 5,
         "course_name": "Introduction to OOP Python",
-        "credit": 3,
-        "price": 249.99,
+        "credit": 5,
+        "price": 19000,
         "details": "Learn object-oriented programming (OOP) principles and Python programming in this introductory course.",
         "image": "https://i.ibb.co/jytSwr9/Rectangle-2.png"
     },
     {
         "id": 6,
         "course_name": "Software Engineering",
-        "credit": 5,
-        "price": 599.99,
+        "credit": 2,
+        "price": 23000,
         "details": "Dive into the world of software engineering and best practices for building robust applications.",
         "image": "https://i.ibb.co/4mxBVXN/IMG-20230915-WA0001.jpg"
     },
@@ -51,7 +51,7 @@
         "id": 7,
         "course_name": "AWS, Cloud Computing",
         "credit": 3,
-        "price": 349.99,
+        "price": 18000,
         "details": "Explore Amazon Web Services (AWS) and learn to deploy and manage cloud-based applications.",
         "image": "https://i.ibb.co/6nZqyHM/IMG-20230915-WA0003.jpg"
     },
@@ -59,7 +59,7 @@
         "id": 8,
         "course_name": "Database (MySQL)",
         "credit": 4,
-        "price": 399.99,
+        "price": 22000,
         "details": "Gain a deep understanding of cloud computing technologies and their applications.",
         "image": "https://i.ibb.co/mv1fgD9/IMG-20230915-WA0006.jpg"
     },
@@ -67,7 +67,7 @@
         "id": 9,
         "course_name": "Problem-Solving Part",
         "credit": 3,
-        "price": 299.99,
+        "price": 27000,
         "details": "Learn database management with MySQL and enhance your problem-solving skills in this combined course.",
         "image": "https://i.ibb.co/JFsqBQp/IMG-20230915-WA0007.jpg"
     }

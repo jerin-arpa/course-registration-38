@@ -67,8 +67,8 @@ const Home = () => {
 
     return (
         <div>
-            <h1 className="text-4xl font-bold text-center py-5 pb-10"> Course Registration</h1>
-            <hr />
+            <h1 className="text-4xl font-bold text-center py-5"> Course Registration</h1>
+            <hr className="mb-5" />
 
             {/* Main */}
             <div className="mt-5 flex flex-col-reverse md:flex-row lg:flex-row gap-5">
@@ -100,7 +100,7 @@ const Home = () => {
                                             <p className="text-lg mr-2">
                                                 <FaBookOpen></FaBookOpen>
                                             </p>
-                                            <p>Credit: {course.credit}</p>
+                                            <p>Credit: {course.credit}hr</p>
                                         </div>
                                     </div>
                                 </div>
