@@ -1,6 +1,6 @@
 # Course Registration
 
-## 1 Project features
+## Project features
 
 Here are three key features of my project:
 
@@ -25,8 +25,7 @@ Here are three key features of my project:
 These features ensure that users can efficiently select courses, manage their cart, keep track of their credit hours, and receive alerts for common user actions such as exceeding the credit hour limit or confirming their course selections. The "Sweet Alerts" enhance the user experience by providing clear feedback and confirmation dialogs.
 
 
-2. How i manage the state in my project
----
+## How i manage the state in my project
 
 In my course registration project, i manage state using React's built-in state management, primarily with the useState hook. Here's how state is managed:
 
