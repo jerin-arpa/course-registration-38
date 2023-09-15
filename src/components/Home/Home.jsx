@@ -7,6 +7,8 @@ const Home = () => {
 
     const [allCourse, setAllCourse] = useState([]);
     const [selectedCourse, setSelectedCourse] = useState([]);
+    const [remaining, setRemaining] = useState(0);
+    const [totalHour, setTotalHour] = useState(0);
 
 
     useEffect(() => {
@@ -19,6 +21,7 @@ const Home = () => {
 
     const handleSelectButton = (course) => {
         const isExist = selectedCourse.find(courseName => courseName.id === course.id);
+        let count = course.credit;
 
 
         if (isExist) {
@@ -26,9 +29,21 @@ const Home = () => {
         }
         else {
 
+            selectedCourse.forEach(courseName => {
+                count += courseName.credit;
+            })
 
-            const newSelectedCourse = [...selectedCourse, course];
-            setSelectedCourse(newSelectedCourse);
+            const totalRemaining = 20 - count;
+
+            if (count > 20) {
+                return alert('You reach your limit');
+            }
+            else {
+                setTotalHour(count);
+                setRemaining(totalRemaining);
+                const newSelectedCourse = [...selectedCourse, course];
+                setSelectedCourse(newSelectedCourse);
+            }
         }
     }
 
@@ -85,7 +100,7 @@ const Home = () => {
 
                 {/* cart-container */}
                 <div className="w-full md:w-1/4 lg:w-1/4 bg-white p-5 rounded-2xl">
-                    <Cart selectedCourse={selectedCourse}></Cart>
+                    <Cart selectedCourse={selectedCourse} remaining={remaining} totalHour={totalHour}></Cart>
                 </div>
             </div>
 
