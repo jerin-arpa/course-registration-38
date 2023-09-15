@@ -74,9 +74,9 @@ const Home = () => {
             <hr className="mb-5" />
 
             {/* Main */}
-            <div className="mt-5 flex flex-col-reverse md:flex-row lg:flex-row gap-5">
+            <div className="mt-5 flex flex-col-reverse md:flex-col-reverse lg:flex-row gap-5">
                 {/* card-container */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full md:w-3/4 lg:w-3/4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full md:w-full lg:w-3/4">
                     {/* card */}
 
                     {
@@ -118,7 +118,7 @@ const Home = () => {
 
 
                 {/* cart-container */}
-                <div className="w-full md:w-1/4 lg:w-1/4">
+                <div className="w-full md:w-full lg:w-1/4">
                     <Cart selectedCourse={selectedCourse} remaining={remaining} totalHour={totalHour} totalPrice={totalPrice}></Cart>
                 </div>
             </div>
