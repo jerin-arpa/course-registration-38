@@ -18,9 +18,18 @@ const Home = () => {
 
 
     const handleSelectButton = (course) => {
+        const isExist = selectedCourse.find(courseName => courseName.id === course.id);
 
-        const newSelectedCourse = [...selectedCourse, course];
-        setSelectedCourse(newSelectedCourse);
+
+        if (isExist) {
+            return alert("Already Booked")
+        }
+        else {
+
+
+            const newSelectedCourse = [...selectedCourse, course];
+            setSelectedCourse(newSelectedCourse);
+        }
     }
 
 
