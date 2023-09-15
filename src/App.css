@@ -1,11 +1,10 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
+.btn-color {
+  background-color: #2F80ED;
+  color: white;
+  font-weight: bold;
 }
-
-@import '@sweetalert2/themes/dark/dark.scss';
