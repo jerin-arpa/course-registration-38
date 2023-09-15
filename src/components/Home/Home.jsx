@@ -30,7 +30,7 @@ const Home = () => {
 
 
         if (isExist) {
-            return toast.warn("Only add one item at a time", {
+            return toast.warn("Item can only be added once!", {
                 position: toast.POSITION.TOP_CENTER
             });
         }
