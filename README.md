@@ -14,15 +14,15 @@ Here are three key features of my project:
 
     * Users can view the total credit hours accumulated in their cart by clicking a button.
     * Implement logic to calculate and display the total credit hours based on the selected courses.
-    * Enforce a credit hour limit and display a "Sweet Alert" when the user attempts to add courses that exceed this limit.
+    * Enforce a credit hour limit and display a "Toast" when the user attempts to add courses that exceed this limit.
 
 3. Price Calculation and Confirmation:
 
     * Users can see the total price of the courses in their cart.
     * Implement a pricing mechanism based on the selected courses, and update the total price dynamically.
-    * Display a "Sweet Alert" to confirm the selection when the user clicks the "Total Credit Hours" button, providing a summary of selected courses, credit hours, and the total price.
+    * Display a "Toast" to confirm the selection when the user clicks the "Total Credit Hours" button, providing a summary of selected courses, credit hours, and the total price.
 
-These features ensure that users can efficiently select courses, manage their cart, keep track of their credit hours, and receive alerts for common user actions such as exceeding the credit hour limit or confirming their course selections. The "Sweet Alerts" enhance the user experience by providing clear feedback and confirmation dialogs.
+These features ensure that users can efficiently select courses, manage their cart, keep track of their credit hours, and receive alerts for common user actions such as exceeding the credit hour limit or confirming their course selections. The "Toasts" enhance the user experience by providing clear feedback and confirmation dialogs.
 
 
 ## How i manage the state in my project

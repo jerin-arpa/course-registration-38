@@ -2,7 +2,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { FaDollarSign, FaBookOpen } from 'react-icons/fa';
 import Cart from "../Cart/Cart";
-import Swal from 'sweetalert2'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Home = () => {
@@ -29,12 +30,9 @@ const Home = () => {
 
 
         if (isExist) {
-            return Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'An item can only be added to the cart once!',
-                footer: '<a href="">Please Select another one</a>'
-            })
+            return toast.warn("Only add one item at a time", {
+                position: toast.POSITION.TOP_CENTER
+            });
         }
         else {
             selectedCourse.forEach(courseName => {
@@ -45,16 +43,9 @@ const Home = () => {
             const totalRemaining = 20 - count;
 
             if (count > 20) {
-                return Swal.fire({
-                    title: 'Oops...',
-                    text: 'You Reach your limits!!',
-                    showClass: {
-                        popup: 'animate__animated animate__fadeInDown'
-                    },
-                    hideClass: {
-                        popup: 'animate__animated animate__fadeOutUp'
-                    }
-                })
+                return toast.error("OPS! You reach your limits", {
+                    position: toast.POSITION.TOP_CENTER
+                });
             }
             else {
                 setTotalHour(count);
@@ -120,6 +111,7 @@ const Home = () => {
                 {/* cart-container */}
                 <div className="w-full md:w-full lg:w-1/4">
                     <Cart selectedCourse={selectedCourse} remaining={remaining} totalHour={totalHour} totalPrice={totalPrice}></Cart>
+                    <ToastContainer></ToastContainer>
                 </div>
             </div>
 
