@@ -5,7 +5,9 @@ function App() {
 
   return (
     <>
-      <Home></Home>
+      <div className='pb-5'>
+        <Home></Home>
+      </div>
     </>
   )
 }

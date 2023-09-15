@@ -11,6 +11,7 @@ const Home = () => {
     const [selectedCourse, setSelectedCourse] = useState([]);
     const [remaining, setRemaining] = useState(0);
     const [totalHour, setTotalHour] = useState(0);
+    const [totalPrice, setTotalPrice] = useState(0);
 
 
     useEffect(() => {
@@ -24,6 +25,7 @@ const Home = () => {
     const handleSelectButton = (course) => {
         const isExist = selectedCourse.find(courseName => courseName.id === course.id);
         let count = course.credit;
+        let prices = course.price;
 
 
         if (isExist) {
@@ -35,9 +37,9 @@ const Home = () => {
             })
         }
         else {
-
             selectedCourse.forEach(courseName => {
                 count += courseName.credit;
+                prices += courseName.price;
             })
 
             const totalRemaining = 20 - count;
@@ -56,6 +58,7 @@ const Home = () => {
             }
             else {
                 setTotalHour(count);
+                setTotalPrice(prices);
                 setRemaining(totalRemaining);
                 const newSelectedCourse = [...selectedCourse, course];
                 setSelectedCourse(newSelectedCourse);
@@ -115,8 +118,8 @@ const Home = () => {
 
 
                 {/* cart-container */}
-                <div className="w-full md:w-1/4 lg:w-1/4 bg-white p-5 rounded-2xl">
-                    <Cart selectedCourse={selectedCourse} remaining={remaining} totalHour={totalHour}></Cart>
+                <div className="w-full md:w-1/4 lg:w-1/4">
+                    <Cart selectedCourse={selectedCourse} remaining={remaining} totalHour={totalHour} totalPrice={totalPrice}></Cart>
                 </div>
             </div>
 
